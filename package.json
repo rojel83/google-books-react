@@ -1,28 +1,29 @@
 {
-  "name": "google-books-react",
+  "name": "google-books",
   "version": "1.0.0",
-  "description": "",
+  "description": "Google Books",
   "main": "server.js",
-  "dependencies": {
-    "build": "^0.1.4",
-    "mongoose": "^5.9.13",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rojel83/google-books-react.git"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently -k \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rojel83/google-books-react/issues"
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.18.7"
   },
-  "homepage": "https://github.com/rojel83/google-books-react#readme"
+  "dependencies": {
+    "axios": "^0.19.0",
+    "currently": "0.0.8",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.6.7",
+    "react-router-dom": "^5.2.0"
+  }
 }
