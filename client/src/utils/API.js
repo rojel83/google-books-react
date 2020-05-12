@@ -1,19 +1,14 @@
 import axios from "axios";
+// endpoint from googlebooks api
+const BaseUrl = "https://www.googleapis.com/books/v1/volumes?q="
 
 export default {
-    getBook: function (query) {
-        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-    },
-    // Deletes the book with the given id
-    deleteBook: function (id) {
-        return axios.delete("/api/books/" + id).then(result => result.data);
-    },
-    // Saves a book to the database
-    saveBook: function (bookData) {
-        return axios.post("/api/books", bookData).then(result => result.data);
-    },
-    // Get the saved a books from the database
-    savedBooks: function () {
-        return axios.get("/api/books").then(result => result.data);
-    }
+    // calls googlbooks api and retrieve books based on user input
+    searchBooks: (query) => axios.get(BaseUrl + query),
+    // get all books saved in db
+    getBooks: () => axios.get("/api/books"),
+    // saves a book to the db
+    saveBook: (bookData) => axios.post("/api/books", bookData),
+    // deletes a book with the given id
+    deleteBook: (id) => axios.delete("api/books/" + id)
 };
