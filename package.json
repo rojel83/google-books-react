@@ -24,6 +24,7 @@
     "currently": "0.0.8",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "mongod": "^2.0.0",
     "mongoose": "^5.6.7",
     "react-router-dom": "^5.2.0"
   }
