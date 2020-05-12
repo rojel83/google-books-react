@@ -8,3 +8,5 @@ function DeleteBtn({ type = "default", className, children, onClick }) {
         </button>
     );
 }
+
+export default DeleteBtn;
