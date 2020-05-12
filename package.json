@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "build": "^0.1.4",
     "currently": "0.0.8",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
