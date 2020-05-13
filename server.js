@@ -3,7 +3,14 @@ const mongoose = require("mongoose");
 const apiRoutes = require("./routes/index");
 const path = require("path");
 const app = express();
+// const PORT = process.env.PORT || 5000;
 const PORT = process.env.PORT || 3001;
+// app.listen(PORT, function () {
+//     console.log("Server running on port 5000...");
+// });
+// http.listen((process.env.PORT || 5000), function () {
+//     console.log('listening on *:5000');
+// });
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
