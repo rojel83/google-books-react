@@ -14,12 +14,20 @@ Create a new React-based Google Books Search app that users can save books to re
 
 *Libraries/Frameworks used:
 
-React
-Bootstrap
-Express
-Mongoose
-React-Bootstrap
-React-Router
-MongoDB
-Axios
-Heroku
+* React
+* Bootstrap
+* Express
+* Mongoose
+* React-Bootstrap
+* React-Router
+* MongoDB
+* Axios
+* Heroku
+# Main
+![Alt](/client/src/images/google1.PNG)
+
+# Search
+![Alt](/client/src/images/google2.PNG)
+
+# Save
+![Alt](/client/src/images/google3.PNG)
