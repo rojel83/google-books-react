@@ -1,4 +1,4 @@
-onst express = require("express");
+const express = require("express");
 const mongoose = require("mongoose");
 const apiRoutes = require("./routes/index");
 const path = require("path");
